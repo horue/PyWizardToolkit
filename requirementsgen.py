@@ -29,5 +29,5 @@ def generate_requirements():
 
     print(f"[✓] Arquivo 'requirements.txt' gerado em {requirements_path}.")
 
-
-generate_requirements()
+if __name__ == "__main__":
+    generate_requirements()
