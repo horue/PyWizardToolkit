@@ -2,6 +2,16 @@ import tkinter as tk
 from tkinter import Tk, filedialog, messagebox
 from tkinter import ttk
 
+def select_folder(l2):
+    global folder
+    folder = filedialog.askdirectory()
+    l2.configure(text=folder)
+
+def select_main(l3):
+    global main_file
+    main_file = filedialog.askopenfilename()
+    l3.configure(text=main_file)
+
 
 def m(root):
     l2 = tk.Label(root, text="PyWizardToolkit - 0.0.1")
@@ -16,13 +26,13 @@ def m(root):
     l2 = tk.Label(root, text=f"Selected Folder: {''}.")
     l2.pack()
 
-    b1 = tk.Button(root, text='Select Project Folder')
+    b1 = tk.Button(root, text='Select Project Folder', command=lambda:select_folder(l2))
     b1.pack(pady=10)
 
     l3 = tk.Label(root, text=f"Selected File: {''}.")
     l3.pack()
 
-    b2 = tk.Button(root, text='Select Project Main File')
+    b2 = tk.Button(root, text='Select Project Main File', command=lambda:select_main(l3))
     b2.pack(pady=10)
 
     pb = ttk.Progressbar(
