@@ -1,6 +1,6 @@
-# PyInstallerToolKit
+# PyWizardToolkit
 
-**PyInstallerToolKit** is a tool designed to automate the creation of Python project installers, including virtual environment setup, dependency installation, and shortcut creation. It serves as an alternative to PyInstaller, especially when you face difficulties in bundling all the necessary libraries in the package.
+**PyWizardToolkit** is a tool designed to automate the creation of Python project installers, including virtual environment setup, dependency installation, and shortcut creation. It serves as an alternative to PyInstaller, especially when you face difficulties in bundling all the necessary libraries in the package.
 
 ## Features
 
