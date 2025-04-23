@@ -1,6 +1,11 @@
 import tkinter as tk
 from tkinter import Tk, filedialog, messagebox
 from tkinter import ttk
+from shortcut import *
+from requirementsgen import *
+
+def create_installer(e1):
+    create_shortcut(app_name=e1, vbs_name='teste')
 
 def select_folder(l2):
     global folder
@@ -43,7 +48,7 @@ def m(root):
     )
     pb.pack()
 
-    b3 = tk.Button(root, text='Create Installer', command=pb.start)
+    b3 = tk.Button(root, text='Create Installer', command=lambda:create_installer(e1=e1.get()))
     b3.pack(pady=10)
 
 
