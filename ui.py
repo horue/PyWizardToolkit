@@ -5,7 +5,13 @@ from shortcut import *
 from requirementsgen import *
 
 def create_installer(e1):
-    create_shortcut(app_name=e1, vbs_name='teste')
+    if e1 == '':
+        tk.messagebox.showwarning(title='Warning!', message="The program name can't be empty")
+    else:
+        try:
+            create_shortcut(app_name=e1, vbs_name='teste')
+        except:
+            messagebox.INFO()
 
 def select_folder(l2):
     global folder
